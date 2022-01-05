@@ -1,7 +1,5 @@
-package day2;
+package day2LinkedList;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**

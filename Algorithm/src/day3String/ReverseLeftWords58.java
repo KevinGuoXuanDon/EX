@@ -1,4 +1,4 @@
-package day3;
+package day3String;
 
 /**
  * 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部
