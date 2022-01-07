@@ -1,4 +1,4 @@
-package day4LookingUp;
+package day5LookingUp;
 
 import java.util.HashMap;
 import java.util.Map;
