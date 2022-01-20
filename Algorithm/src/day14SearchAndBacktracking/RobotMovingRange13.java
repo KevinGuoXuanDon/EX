@@ -1,4 +1,4 @@
-package day13SearchAndBacktracking;
+package day14SearchAndBacktracking;
 
 /**
  * 地上有一个m行n列的方格，从坐标 [0,0] 到坐标 [m-1,n-1] 。
