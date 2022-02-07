@@ -32,22 +32,23 @@ public class SingleNumbers56 {
         return result;
     }
     //如果不考虑时间复杂度要求，使用排序也可以做,Arrays.sort（）时间复杂度nlogn,空间复杂度倒是满足了
-    //这方法还没写完
+    //12ms 6.63%
     public int[] singleNumbersBy(int[] nums){
         Arrays.sort(nums);
-        int[] result = new int[2];
-        for (int i = 0; i < nums.length-2; i++) {
+        int a = Integer.MAX_VALUE;
+        int[] result = new int[]{a,a};
+        for (int i = 0; i < nums.length-1; i++) {
             if(nums[i]!=nums[i+1]){
-                if(result[0]!=0){
-                    result[1]=nums[i];
-                }
-                else result[0]=nums[i];
+                if(result[0]!=a && result[1]!=a && result[0]!=result[1]) break;
+                if(i==0 || nums[i]!=nums[i-1]) result[0]=nums[i];
+                if(i+1 ==nums.length-1 || nums[i+1]!=nums[i+2]) result[1]=nums[i+1];
             }
         }
         return result;
     }
 
     //比特运算
+    //1ms 100%
     public int[] singleNumberByBitOperation(int[] nums){
         int n=0;
         for (int i:nums) {
@@ -66,8 +67,7 @@ public class SingleNumbers56 {
     }
 
     public static void main(String[] args) {
-        System.out.println(2^1);
-        System.out.println(2&1);
-
+        SingleNumbers56 singleNumbers56 = new SingleNumbers56();
+        System.out.println(singleNumbers56.singleNumbersBy(new int[]{1,4,4,6}).toString());
     }
 }
