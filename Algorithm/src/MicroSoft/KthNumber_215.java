@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Random;
 
+/**
+ * 给定一个数组，返回第K大的数
+ */
 public class KthNumber_215 {
     //2ms
     public int findKthLargest(int[] nums, int k){

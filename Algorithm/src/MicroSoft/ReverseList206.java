@@ -1,5 +1,8 @@
 package MicroSoft;
 
+/**
+ * 给定一个链表，反转它
+ */
 public class ReverseList206 {
 
     public class ListNode {
