@@ -6,8 +6,6 @@ import java.util.List;
 
 public class PermuteUnique {
     boolean[] vis;
-    int count=0;
-
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
         List<Integer> perm = new ArrayList<Integer>();
@@ -29,7 +27,6 @@ public class PermuteUnique {
             perm.add(nums[i]);
             vis[i] = true;
             backtrack(nums, ans, idx + 1, perm);
-            count++;
             vis[i] = false;
             perm.remove(idx);
         }
@@ -38,7 +35,5 @@ public class PermuteUnique {
     public static void main(String[] args) {
         PermuteUnique p = new PermuteUnique();
         p.permuteUnique(new int[]{1,1}).stream().forEach(System.out::println);
-        System.out.println(p.count);
-
     }
 }
