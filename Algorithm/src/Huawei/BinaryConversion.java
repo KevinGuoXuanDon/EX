@@ -2,7 +2,10 @@ package Huawei;
 
 import java.util.Scanner;
 
-public class Binary {
+/**
+ * 二进制中1的个数
+ */
+public class BinaryConversion {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
