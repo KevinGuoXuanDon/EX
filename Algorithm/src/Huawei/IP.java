@@ -2,6 +2,7 @@ package Huawei;
 import java.util.*;
 import java.io.*;
 
+//判断ip地址是第几类
 // 注意类名必须为 Main, 不要有任何 package xxx 信息
 public class IP {
     private static final String INVALID_ALL_1 = "255.255.255.255";
