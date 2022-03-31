@@ -22,7 +22,7 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/Ygoe9J
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class AllowRepeatCombine {
+public class CombineWithMutilpleSelect {
     List<List<Integer>> res = new LinkedList<>();
     LinkedList<Integer> list = new LinkedList<>();
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
