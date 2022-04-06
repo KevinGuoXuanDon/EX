@@ -1,5 +1,7 @@
 package leetcode.LinkedList;
 
+import java.util.PriorityQueue;
+
 /**
  * 给你一个链表数组，每个链表都已经按升序排列。
  * 请你将所有链表合并到一个升序链表中，返回合并后的链表。
@@ -18,7 +20,21 @@ package leetcode.LinkedList;
 public class MergeKSortedList {
     // 使用技巧：因为涉及多个list，指针不够，那么使用priorityQueue
     public ListNode mergeKLists(ListNode[] lists) {
-        return null;
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((o1, o2) -> o1.val-o2.val);
+        for(ListNode node : lists){
+            if(node!=null)
+                queue.add(node);
+        }
+        ListNode dummyHead = new ListNode(-1);
+        while(!queue.isEmpty()){
+            ListNode node = queue.poll();
+            dummyHead.next = node;
+            dummyHead = dummyHead.next;
+            if(node.next!=null){
+                queue.add(node.next);
+            }
+        }
+        return dummyHead.next;
     }
 
     public class ListNode {
