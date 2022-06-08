@@ -53,6 +53,27 @@ public class Trie {
         }
         return trie!=null;
     }
+    public Trie getTrie(String prefix){
+        Trie trie = this;
+        for(int i=0;i<prefix.length();i++){
+            char c = prefix.charAt(i);
+            int index = c-'a';
+            if(trie.nodes[index]==null)
+                return null;
+            trie = trie.nodes[index];
+        }
+        return trie;
+    }
+
+    public boolean searchRePackage(String word) {
+        Trie trie = getTrie(word);
+        return trie!=null && trie.isWord;
+    }
+
+    public boolean startsWithRePackage(String prefix) {
+        Trie trie = getTrie(prefix);
+        return trie!=null;
+    }
 }
 
 /**
