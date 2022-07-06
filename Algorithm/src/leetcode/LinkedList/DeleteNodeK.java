@@ -46,4 +46,20 @@ public class DeleteNodeK {
         p.next = p.next.next;
         return head;
     }
+    public ListNode removeNthFromEndByJune(ListNode head, int n) {
+        ListNode p = head;
+        for(int i=0;i<n;i++){
+            p=p.next;
+        }
+        if(p==null) return head.next;
+        ListNode target = new ListNode(0);
+        target.next = head;
+        while(p!=null){
+            target = target.next;
+            p=p.next;
+        }
+        System.out.println(target.val);
+        target.next = target.next.next;
+        return head;
+    }
 }
