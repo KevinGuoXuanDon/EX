@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class ImplementQueueUsingStacks {
-    public class MyQueue() {
+    public class MyQueue {
         Deque<Integer> inDeque;
         Deque<Integer> outDeque;
 
