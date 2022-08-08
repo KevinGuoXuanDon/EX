@@ -1,7 +1,6 @@
-package leetcode.TraceBack;
+package leetcode.TraceBackAndRecursive;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 /**
  * 将得到一个整数数组 matchsticks ，

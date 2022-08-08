@@ -1,4 +1,4 @@
-package leetcode.TraceBack;
+package leetcode.TraceBackAndRecursive;
 
 /**
  * 给定一个可能有重复数字的整数数组candidates和一个目标数target，找出candidates中所有可以使数字和为target的组合。

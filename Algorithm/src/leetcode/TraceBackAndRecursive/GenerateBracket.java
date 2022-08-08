@@ -1,4 +1,4 @@
-package leetcode.TraceBack;
+package leetcode.TraceBackAndRecursive;
 import  java.util.*;
 public class GenerateBracket {
     List<String> list;
